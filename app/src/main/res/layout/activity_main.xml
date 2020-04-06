@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/subjects_linear_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffff00"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/subjects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:cursorVisible="false"
+                android:fontFamily="monospace"
+                android:gravity="center_horizontal"
+                android:padding="16sp"
+                android:text="Subjects"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+
+            <include layout="@layout/subjects_list_items" />
+
+            <Button
+                android:id="@+id/subjects_add_button"
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:onClick="addSubjectsView"
+                android:text="+" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="490dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/labs_linear_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="top|center_vertical"
+            android:orientation="vertical"
+            android:background="#0000FF">
+
+            <TextView
+                android:id="@+id/labs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:fontFamily="monospace"
+                android:gravity="center_horizontal"
+                android:padding="16sp"
+                android:text="LABS"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <include layout="@layout/labs_list_items" />
+
+            <Button
+                android:id="@+id/labs_add_button"
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:onClick="addLabsView"
+                android:text="+" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
